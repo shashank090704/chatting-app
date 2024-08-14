@@ -22,6 +22,6 @@ app.use(express.static("./public"));
       console.log('user disconnected');
     });
  });
- server.listen(3000,()=>{
+ server.listen("https://chatting-app-rosy.vercel.app/",()=>{
     console.log("litening on 3000")
  });
