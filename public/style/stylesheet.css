@@ -1,0 +1,156 @@
+/* General Body Styles */
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+/* Container Styles */
+.container2 {
+    height: 80%;
+    width: 90%; /* Adjusted for better responsiveness */
+    max-width: 1200px; /* Optional: limits the maximum width */
+    background-image: url('../images/WhatsApp Background wallpapers.jpg');
+    border-radius: 20px;
+    margin: 0 auto; /* Centers the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    overflow: hidden; /* Ensures no content overflows the container */
+    display: flex;
+    flex-direction: column; /* Ensure the container has a column layout */
+}
+
+/* Message Container */
+.contmessase {
+    flex: 1; /* Allows this container to take available space */
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px; /* Increased gap for better readability */
+    overflow-y: auto;
+}
+
+/* Message Styles */
+.pr, .ps {
+    display: inline-block; /* Changed from inline to inline-block */
+    padding: 10px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    max-width: 70%; /* Added to prevent messages from being too wide */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.pr {
+    align-self: flex-end;
+    margin-right: 20px;
+    background-color: #50C878;
+    color: black;
+}
+
+.ps {
+    align-self: flex-start;
+    background-color: #00563B;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Send Container */
+.contsend {
+    height: 10%; /* Adjusted height to fit content better */
+    width: 100%;
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Added padding for spacing */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Form and Input Styles */
+#form1 {
+    height: 100%;
+    width: 100%;
+    display: flex; /* Use flexbox to align form items */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+#message {
+    margin: 0 10px; /* Adjusted margin to fit within container */
+    width: calc(100% - 90px); /* Adjust width to fit within the container, accounting for the send button width and margin */
+    max-width: 400px; /* Optional: limits the maximum width */
+    height: 100%; /* Adjusted height to fit container */
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #355E3B;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Send Button */
+#send {
+    height: 100%; /* Adjusted to fit the height of the container */
+    width: 15%; /* Adjusted for better responsiveness */
+    margin-left: 10px; /* Added margin for spacing */
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #50C878;
+    color: white;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Remove outline on focus */
+input:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container2 {
+        width: 95%;
+    }
+
+    .pr, .ps {
+        font-size: medium; /* Adjust font size */
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+
+    #message {
+        font-size: medium; /* Adjust font size */
+        max-width: 300px; /* Adjust maximum width */
+    }
+
+    #send {
+        width: 20%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container2 {
+        width: 100%;
+        height: 90%;
+    }
+
+    .pr, .ps {
+        font-size: small; /* Further adjust font size */
+        max-width: 100%; /* Allow messages to take full width */
+    }
+
+    #message {
+        font-size: small; /* Further adjust font size */
+        max-width: 250px; /* Further adjust maximum width */
+    }
+
+    #send {
+        width: 25%; /* Further adjust width */
+    }
+}
+
