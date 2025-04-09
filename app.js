@@ -22,6 +22,6 @@ app.use(express.static("./public"));
       console.log('user disconnected');
     });
  });
- server.listen("chatting-app-one-roan.vercel.app",()=>{
+ server.listen("https://chatting-app-one-roan.vercel.app/",()=>{
     console.log("litening on 3000")
  });
